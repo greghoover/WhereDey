@@ -27,7 +27,8 @@ namespace WhereDey
 			buttonGetGPS.Clicked += async (sender, args) =>
 			{
 				var locator = CrossGeolocator.Current;
-				locator.DesiredAccuracy = 50;
+				//locator.DesiredAccuracy = 50;
+				locator.DesiredAccuracy = 100;
 				labelGPS.Text = "Getting gps";
 
 				var position = await locator.GetPositionAsync(timeoutMilliseconds: 10000);
